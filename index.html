@@ -48,12 +48,6 @@ input[type="date"]{width:100%;padding:14px 16px;border:1.5px solid var(--border)
 </head><body>
 <nav class="nav"><div class="nav-inner"><a href="https://jwaytools.com/" class="nav-logo">J<span>WAY</span></a><button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button><div class="nav-links"><a href="https://jwaytools.com/char-counter/">글자수</a><a href="https://jwaytools.com/date-calculator/">날짜</a><a href="https://jwaytools.com/percent-calculator/">퍼센트</a><a href="https://jwaytools.com/salary-calculator/">연봉</a><a href="https://jwaytools.com/bmi-calculator/">BMI</a><a href="https://jwaytools.com/exchange-rate/">환율</a><a href="https://jwaytools.com/unit-converter/">단위</a><a href="https://jwaytools.com/timer/">타이머</a><a href="https://jwaytools.com/qr-generator/">QR</a><a href="https://jwaytools.com/color-converter/">색상</a><a href="https://jwaytools.com/random-picker/">랜덤</a><a href="https://jwaytools.com/loan-calculator/">대출</a><a href="https://jwaytools.com/age-calculator/">만나이</a><a href="https://jwaytools.com/savings-calculator/">예적금</a><a href="https://jwaytools.com/income-tax-calculator/">소득세</a></div></div></nav>
 <header class="header"><h1>만 나이 <em>계산기</em></h1><p>생년월일을 입력하면 만 나이, 세는 나이, 연 나이를 한번에 확인합니다. 2023년 6월 만 나이 통일법 적용.</p></header>
-<div class="tool-hero-illust" style="max-width:760px;margin:24px auto 0;padding:0 20px">
-<div style="border-radius:12px;overflow:hidden;background:var(--surface-alt);min-height:120px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--border)">
-<img src="hero-illustration.png" alt="도구 일러스트" style="width:100%;height:auto;display:block;max-height:300px" loading="lazy" onerror="this.parentElement.innerHTML='<div style='padding:30px 20px;text-align:center;color:#9E9E9E;font-size:13px'>🎨 도구 일러스트 자리 (hero-illustration.png 업로드 시 자동 표시)</div>'">
-</div>
-</div>
-
 <main class="container">
 <div class="calc-card">
 <div class="field-group"><label class="field-label">생년월일</label><input type="date" id="birthDate" value="1990-01-01"></div>
@@ -94,10 +88,25 @@ input[type="date"]{width:100%;padding:14px 16px;border:1.5px solid var(--border)
 <h3>연 나이 (일부 법령)</h3>
 <p>청소년보호법(만 19세 미만 술·담배 금지), 병역법, 민방위 등 일부 법령에서 사용됩니다. 생일에 관계없이 "올해 - 출생년도"로 계산해 연초부터 일괄 적용합니다.</p>
 
-<div class="guide-tip"><strong>참고:</strong> 만 나이 통일법 시행 후에도 술·담배 구매 연령(만 19세 미만 금지)은 만 나이가 아닌 "해당 연도에 19세가 되는 자"를 기준으로 하는 연 나이를 계속 사용합니다. 즉, 생일이 지나지 않았어도 해당 연도에 19세가 되면 가능합니다.</p>
+<div class="guide-tip"><strong>참고:</strong> 만 나이 통일법 시행 후에도 술·담배 구매 연령(만 19세 미만 금지)은 만 나이가 아닌 "해당 연도에 19세가 되는 자"를 기준으로 하는 연 나이를 계속 사용합니다. 즉, 생일이 지나지 않았어도 해당 연도에 19세가 되면 가능합니다.</div>
 
 <h2>외국과의 차이</h2>
 <p>대부분의 국가는 만 나이만 사용하므로 국제적으로 본인 나이를 말할 때는 만 나이를 쓰는 것이 표준입니다. 한국만 유일하게 세는 나이를 일상적으로 쓰던 나라였는데, 2023년 만 나이 통일법으로 이 관습도 점차 사라지고 있습니다.</p>
+
+<h2>계산 기준과 공식 출처</h2>
+<p>이 계산기는 2023년 6월 28일부터 시행된 만 나이 통일 원칙을 기준으로 만 나이를 계산합니다. 만 나이는 출생일을 0세로 보고 생일이 지날 때마다 1세씩 더하는 방식입니다. 연 나이는 현재 연도에서 출생연도를 뺀 값이며, 세는 나이는 출생한 해를 1세로 보고 새해마다 1세씩 더하는 한국식 관습 나이입니다.</p>
+<p>만 나이 제도 확인에는 <a href="https://www.moleg.go.kr/" target="_blank" rel="noopener">법제처</a>의 만 나이 통일 안내와 <a href="https://www.law.go.kr/" target="_blank" rel="noopener">국가법령정보센터</a>의 민법·행정기본법 자료를 참고할 수 있습니다. 다만 청소년보호법, 병역법, 초등학교 취학처럼 별도 기준을 두는 영역은 개별 법령을 확인해야 합니다.</p>
+
+<h2>실제 예시 3가지</h2>
+<h3>2000년 12월 31일 출생자</h3>
+<p>2026년 1월 1일 기준으로 만 나이는 아직 생일이 지나지 않았으므로 25세입니다. 세는 나이는 출생 연도부터 1세로 계산해 27세, 연 나이는 2026 - 2000 = 26세입니다.</p>
+<h3>병역판정검사와 연 나이</h3>
+<p>병역 관련 기준은 생일이 지났는지보다 출생연도를 기준으로 관리되는 항목이 많습니다. 그래서 만 나이 계산 결과와 병역 행정상 기준이 다르게 보일 수 있습니다.</p>
+<h3>해외 서류 작성</h3>
+<p>여권, 비자, 해외 학교·회사 서류에는 한국식 세는 나이가 아니라 만 나이를 입력해야 합니다. 이 도구에서 표시되는 만 나이를 국제 기준 나이로 보면 됩니다.</p>
+
+<h2>사용 전 주의사항</h2>
+<p>나이 기준은 법령이나 제도별로 예외가 있을 수 있습니다. 술·담배 구매, 병역, 취학, 선거권, 공무원 시험 응시 연령처럼 법적 효과가 있는 판단은 반드시 해당 기관의 최신 안내를 확인하세요. 이 계산기는 생년월일과 기준일을 바탕으로 나이를 계산하는 참고용 도구입니다.</p>
 
 <h2>이 도구의 주요 기능</h2>
 <p>생년월일을 입력하면 만 나이, 세는 나이, 연 나이 3가지를 동시에 계산해 표시합니다. 기준일을 오늘이 아닌 특정 날짜로 바꿔서 과거 또는 미래 시점의 나이도 계산할 수 있습니다. 생일까지 남은 일수, 태어난 지 총 일수, 다음 생일 날짜와 요일, 띠 정보까지 함께 제공되어 프로필 작성이나 행정 서류 작성에 유용합니다. 모든 계산은 브라우저에서 이루어지며 입력한 생년월일 정보는 어디에도 저장되지 않습니다.</p>
